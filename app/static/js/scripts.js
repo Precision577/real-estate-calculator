@@ -1,14 +1,3 @@
-function clearFormFields() {
-    const form = document.getElementById('offerForm');
-    const user_name = form.user_name.value;  // Preserve the user's name
-
-    // Clear all form fields
-    form.reset();
-
-    // Restore the user's name
-    form.user_name.value = user_name;
-}
-
 function cleanNumeric(value) {
     return parseFloat(value) || 0;
 }
@@ -93,7 +82,7 @@ function generateOffer() {
     data = compute_financial_metrics(data);
 
     const template = `
-<p>Hello <strong>${data.contact_first_name}</strong>,</p>
+<p>Hello ${data.contact_first_name},</p>
 
 <p>Thank you for taking the time to review our offer to purchase your listing located at <strong>${data.contact_address}</strong>.</p>
 
@@ -143,6 +132,17 @@ function copyToClipboard() {
     document.execCommand('copy');
     document.body.removeChild(el);
     alert('Copied to clipboard');
+}
+
+function clearFormFields() {
+    const form = document.getElementById('offerForm');
+    const user_name = form.user_name.value;  // Preserve the user's name
+
+    // Clear all form fields
+    form.reset();
+
+    // Restore the user's name
+    form.user_name.value = user_name;
 }
 
 function clearEditor() {
