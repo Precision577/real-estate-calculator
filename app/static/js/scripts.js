@@ -123,10 +123,17 @@ function generateOffer() {
     CKEDITOR.instances.offerOutput.setData(template);
 }
 
+function decodeHtmlEntities(text) {
+    var textarea = document.createElement('textarea');
+    textarea.innerHTML = text;
+    return textarea.value;
+}
+
 function copyToClipboard() {
     const offerOutput = CKEDITOR.instances.offerOutput.getData();
+    const plainText = decodeHtmlEntities(offerOutput);
     const el = document.createElement('textarea');
-    el.value = offerOutput.replace(/<[^>]+>/g, '');  // Remove HTML tags for plain text copy
+    el.value = plainText;  // Convert HTML entities to plain text
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
