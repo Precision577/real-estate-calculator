@@ -11,7 +11,7 @@ body {
 
 .container {
     background-color: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
@@ -30,7 +30,7 @@ h1 {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     width: 100%;
 }
@@ -133,5 +133,41 @@ button:hover {
     font-size: 14px;
     line-height: 1.6;
     outline: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (min-width: 600px) {
+    .content {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+@media (max-width: 599px) {
+    .container {
+        padding: 10px;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    input {
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+        padding: 8px;
+        margin-top: 15px;
+    }
+
+    .editor-toolbar {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .editor-toolbar button {
+        width: 100%;
+    }
 }
 
