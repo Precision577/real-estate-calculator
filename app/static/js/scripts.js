@@ -124,9 +124,9 @@ function generateOffer() {
 }
 
 function decodeHtmlEntities(text) {
-    var parser = new DOMParser();
-    var dom = parser.parseFromString('<!doctype html><body>' + text, 'text/html');
-    return dom.body.textContent;
+    const element = document.createElement('div');
+    element.innerHTML = text;
+    return element.textContent || element.innerText || "";
 }
 
 function copyToClipboard() {
