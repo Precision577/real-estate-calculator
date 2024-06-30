@@ -124,18 +124,17 @@ function generateOffer() {
 }
 
 function decodeHtmlEntities(text) {
-    var textarea = document.createElement('textarea');
-    textarea.innerHTML = text;
-    return textarea.value;
+    var parser = new DOMParser();
+    var dom = parser.parseFromString('<!doctype html><body>' + text, 'text/html');
+    return dom.body.textContent;
 }
 
 function copyToClipboard() {
     const offerOutput = CKEDITOR.instances.offerOutput.getData();
+    const plainText = decodeHtmlEntities(offerOutput);  // Decode HTML entities
     const el = document.createElement('textarea');
-    el.innerHTML = offerOutput;  // Use innerHTML to decode HTML entities
-    const plainText = el.value;
-    document.body.appendChild(el);
     el.value = plainText;
+    document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
