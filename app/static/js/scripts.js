@@ -131,10 +131,11 @@ function decodeHtmlEntities(text) {
 
 function copyToClipboard() {
     const offerOutput = CKEDITOR.instances.offerOutput.getData();
-    const plainText = decodeHtmlEntities(offerOutput);
     const el = document.createElement('textarea');
-    el.value = plainText;  // Convert HTML entities to plain text
+    el.innerHTML = offerOutput;  // Use innerHTML to decode HTML entities
+    const plainText = el.value;
     document.body.appendChild(el);
+    el.value = plainText;
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
