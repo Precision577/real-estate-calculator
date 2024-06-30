@@ -30,7 +30,7 @@ h1 {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 20px;
     width: 100%;
 }
@@ -147,6 +147,10 @@ button:hover {
         padding: 10px;
     }
 
+    .content {
+        grid-template-columns: 1fr;
+    }
+
     .form-group {
         flex-direction: column;
     }
@@ -168,6 +172,11 @@ button:hover {
 
     .editor-toolbar button {
         width: 100%;
+    }
+
+    .input-section,
+    .output-section {
+        padding: 10px;
     }
 }
 
