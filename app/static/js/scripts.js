@@ -1,3 +1,14 @@
+function clearFormFields() {
+    const form = document.getElementById('offerForm');
+    const user_name = form.user_name.value;  // Preserve the user's name
+
+    // Clear all form fields
+    form.reset();
+
+    // Restore the user's name
+    form.user_name.value = user_name;
+}
+
 function cleanNumeric(value) {
     return parseFloat(value) || 0;
 }
@@ -108,11 +119,11 @@ function generateOffer() {
 <strong>Earnest Money Deposit (EMD):</strong> $1,500 non-refundable, submitted on the first day post-inspection<br>
 <strong>Close of Escrow (COE):</strong> On or before 30 days from the signed contract</p>
 
-<p>In all offers, your commission will be covered. In the cash offer, it will be deducted from the sellers proceeds and in the seller financing offers, it will be deducted from the down payment to the seller.</p>
+<p>In all offers, your commission will be covered. In the cash offer, it will come out of the seller's proceeds and in the seller financing offers, it will come out of the down payment to the seller.</p>
 
-<p>Additionally, if there are any missed payments under the seller financing options, the property will revert back to the seller in lieu of foreclosure.</p>
+<p>Additionally, should there be any missed payments under the seller financing options, the property will revert back to the seller in lieu of foreclosure.</p>
 
-<p>Please do not hesitate to reach out to discuss any aspect of these proposals or to schedule a meeting.</p>
+<p>Please don’t hesitate to reach out to discuss any aspect of these proposals or to schedule a meeting.</p>
 
 <p>Looking forward to your response.</p>
 
@@ -123,18 +134,10 @@ function generateOffer() {
     CKEDITOR.instances.offerOutput.setData(template);
 }
 
-
-function decodeHtmlEntities(text) {
-    const element = document.createElement('div');
-    element.innerHTML = text;
-    return element.textContent || element.innerText || "";
-}
-
 function copyToClipboard() {
     const offerOutput = CKEDITOR.instances.offerOutput.getData();
-    const plainText = decodeHtmlEntities(offerOutput);  // Decode HTML entities
     const el = document.createElement('textarea');
-    el.value = plainText;
+    el.value = offerOutput.replace(/<[^>]+>/g, '');  // Remove HTML tags for plain text copy
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
