@@ -40,11 +40,10 @@ function compute_financial_metrics(data) {
         management_fee = roundNumeric(rent * 0.1);
         capex_fee = roundNumeric(rent * 0.05);
         vacancy_fee = roundNumeric(rent * 0.05);
-        monthly_creative_payments = roundNumeric(rent - (350 + insurance + property_taxes + management_fee + capex_fee + vacancy_fee));
+        monthly_creative_payments = roundNumeric(rent - (management_fee + capex_fee + vacancy_fee + property_taxes + insurance + 350));
         downpayment = roundNumeric(price * 0.1);
     }
 
-    // Ensure monthly_creative_payments is a reasonable positive value
     if (monthly_creative_payments <= 0) {
         monthly_creative_payments = roundNumeric(rent * 0.5);  // Example default value
     }
@@ -66,7 +65,6 @@ function compute_financial_metrics(data) {
 
     return data;
 }
-
 
 function generateOffer() {
     const form = document.getElementById('offerForm');
@@ -154,6 +152,16 @@ function clearEditor() {
 window.onload = function() {
     CKEDITOR.replace('offerOutput', {
         height: 400
+    });
+
+    // Attempt to hide CKEditor's version warning
+    CKEDITOR.on('instanceReady', function (ev) {
+        var editor = ev.editor;
+        editor.on('notificationShow', function (notifEvt) {
+            if (notifEvt.data.message.includes("This CKEditor 4.16.0 version is not secure.")) {
+                notifEvt.cancel();
+            }
+        });
     });
 }
 

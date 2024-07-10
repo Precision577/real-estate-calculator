@@ -1,0 +1,95 @@
+[33mcommit 0b48d4420d1a1236e51727d48e2e48c455e6b270[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Tue Jul 9 18:39:04 2024 -0500
+
+    Update styles.css with necessary styles for sliders and improved layout
+
+[33mcommit 3dc43e8b639aa2e851d49cdf663ce2133ddb4f46[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Tue Jul 9 18:36:04 2024 -0500
+
+    Add TVM calculations and sliders for input adjustments
+
+[33mcommit 055959f8f9c8cc646d663f299ebcd2d6cbece711[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 17:11:12 2024 -0500
+
+    Remove bold formatting from contact's first name in the email template
+
+[33mcommit 622b67944d46101939d2adc778f898524c106a6d[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 17:10:14 2024 -0500
+
+    Add functionality to clear form fields except user name
+
+[33mcommit 2c04b73ffe7751f5f8157b77d9c6dba4d87f8f32[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:48:44 2024 -0500
+
+    Update index.html for dark theme
+
+[33mcommit 84a48e8c75861c69692a96bbff102e6808c3e613[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:44:57 2024 -0500
+
+    Update copyToClipboard function to handle HTML entities using hidden div
+
+[33mcommit cd9240dc18e48c737a26d832bbeaee673f67f1eb[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:43:32 2024 -0500
+
+    Update copyToClipboard function to correctly decode HTML entities
+
+[33mcommit c641b3b6860de28cb0db367e4c8419d2d32eb5f1[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:42:27 2024 -0500
+
+    Update copyToClipboard function to handle HTML entities correctly
+
+[33mcommit 30ea1c6669e10436cd68fdaa2f1799c29110fb39[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:41:00 2024 -0500
+
+    Update copyToClipboard function to handle HTML entities
+
+[33mcommit 27dfd072de6952665dafdc84df5acc774e2f4a5e[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:21:07 2024 -0500
+
+    Fix mobile layout
+
+[33mcommit 6449478b5bdc3f6c355d499d001c2fe857920a90[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:19:17 2024 -0500
+
+    Improve mobile layout
+
+[33mcommit 48f7c87de5137498f0972243e14eea33042d87d7[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:17:24 2024 -0500
+
+    Add responsive design for mobile support
+
+[33mcommit 6e7bf4619d9087f25b6b036fe7a55bc3f64a042a[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:06:21 2024 -0500
+
+    Update index.html for GitHub Pages
+
+[33mcommit 0abc7057b7304a1666c0d0894d0c025a6d284575[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:05:11 2024 -0500
+
+    Remove duplicate index.html and move correct file to root
+
+[33mcommit c802bca230ec31389f52481e65a65b0e79139382[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 03:02:18 2024 -0500
+
+    Initial commit
+
+[33mcommit aec03f2287a21cbe3502aa4075f9b909990c99be[m
+Author: Precision577 <126776427+Precision577@users.noreply.github.com>
+Date:   Sun Jun 30 02:58:22 2024 -0500
+
+    Initial commit
