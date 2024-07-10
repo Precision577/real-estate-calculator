@@ -33,7 +33,8 @@ function compute_financial_metrics(data) {
     let monthly_creative_payments = 0;
     let downpayment = 0;
 
-    let cash_offer = roundNumeric(price * 0.75);
+    let multiplier = parseFloat(document.getElementById('cashOfferMultiplier').value);
+    let cash_offer = roundNumeric(price * multiplier);
 
     if (rent > 0) {
         management_fee = roundNumeric(rent * 0.1);
@@ -65,6 +66,7 @@ function compute_financial_metrics(data) {
 
     return data;
 }
+
 
 function generateOffer() {
     const form = document.getElementById('offerForm');

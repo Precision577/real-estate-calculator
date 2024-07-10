@@ -46,6 +46,14 @@
                         <label for="hoa_fee">HOA Fee:</label>
                         <input type="number" id="hoa_fee" name="hoa_fee" placeholder="Enter HOA fee">
                     </div>
+                    <div class="form-group">
+                        <label for="cashOfferMultiplier">Cash Offer Multiplier:</label>
+                        <select id="cashOfferMultiplier" name="cashOfferMultiplier">
+                            <option value="0.65">65%</option>
+                            <option value="0.70" selected>70%</option>
+                            <option value="0.75">75%</option>
+                        </select>
+                    </div>
                     <button type="button" onclick="generateOffer()">Generate Offer</button>
                 </form>
             </div>
