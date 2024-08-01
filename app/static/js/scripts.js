@@ -96,7 +96,8 @@ function generateOffer() {
 <h3>Offer 2 - Seller Financing (Longer Term):</h3>
 <p><strong>Offer Price:</strong> $${data.price}<br>
 <strong>Monthly Payment:</strong> $${data.monthly_creative_payments}<br>
-<strong>Down Payment:</strong> $${data.downpayment}</p>
+<strong>Down Payment:</strong> $${data.downpayment}<br>
+<strong>Term Length:</strong> ${data.term_length_months} months</p>
 
 <h3>Offer 3 - Seller Financing (Shorter Term):</h3>
 <p><strong>Offer Price:</strong> $${data.price}<br>
