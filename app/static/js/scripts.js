@@ -90,7 +90,8 @@ function generateOffer() {
 
 <h3>Offer 1 - Cash Purchase:</h3>
 <p><strong>Offer Price:</strong> $${data.cash_offer}<br>
-<strong>Closing Costs:</strong> Covered by us in full</p>
+<strong>Closing Costs:</strong> Covered by us in full<br>
+<strong>Term Length:</strong> ${data.term_length_months} months</p>
 
 <h3>Offer 2 - Seller Financing (Longer Term):</h3>
 <p><strong>Offer Price:</strong> $${data.price}<br>
@@ -100,6 +101,7 @@ function generateOffer() {
 <h3>Offer 3 - Seller Financing (Shorter Term):</h3>
 <p><strong>Offer Price:</strong> $${data.price}<br>
 <strong>Monthly Payment:</strong> $${data.monthly_creative_payments}<br>
+<strong>Down Payment:</strong> $${roundNumeric(data.price * 0.05)}<br>  <!-- 5% of the price -->
 <strong>Term Length:</strong> ${data.term_length_months} months<br>
 <strong>Balloon Amount:</strong> $${data.cash_offer}</p>
 
@@ -122,6 +124,7 @@ function generateOffer() {
 
     CKEDITOR.instances.offerOutput.setData(template);
 }
+
 
 function copyToClipboard() {
     const offerOutput = CKEDITOR.instances.offerOutput.getData();
