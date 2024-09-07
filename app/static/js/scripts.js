@@ -225,37 +225,20 @@ function generateOffer() {
     const template = `
 <p>Hello ${data.contact_first_name},</p>
 
-<p>Thank you for taking the time to review our offer to purchase your listing located at <strong>${data.contact_address}</strong>.</p>
+<p>Thank you for taking the time to review our cash purchase offer for your listing located at <strong>${data.contact_address}</strong>.</p>
 
-<p>My team and I have carefully put together three offers for your consideration. Please review the details below and let us know if any options align with your expectations.</p>
-
-<h3>Offer 1 - Cash Purchase:</h3>
+<h3>Offer Details:</h3>
 <p><strong>Offer Price:</strong> $${data.cash_offer}<br>
 <strong>Closing Costs:</strong> Covered by us in full</p>
 
-<h3>Offer 2 - Seller Financing (Longer Term):</h3>
-<p><strong>Offer Price:</strong> $${data.price}<br>
-<strong>Monthly Payment:</strong> $${data.monthly_creative_payments}<br>
-<strong>Down Payment:</strong> $${data.downpayment}<br>
-<strong>Term Length:</strong> ${data.long_term_length_months} months</p>
-
-<h3>Offer 3 - Seller Financing (Shorter Term):</h3>
-<p><strong>Offer Price:</strong> $${data.price}<br>
-<strong>Monthly Payment:</strong> $${data.monthly_creative_payments}<br>
-<strong>Down Payment:</strong> $${roundNumeric(data.price * (data.downpaymentPercentage / 100 || 0.05))}<br>  <!-- Default to 5% if not provided -->
-<strong>Term Length:</strong> ${data.short_term_length_months} months<br>
-<strong>Balloon Amount:</strong> $${data.cash_offer}</p>
-
-<p>For all three offers:</p>
-<p><strong>Inspection Period:</strong> 10 business days (Please allow time for our contractor to schedule)<br>
+<p>For this offer:</p>
+<p><strong>Inspection Period:</strong> 10 business days<br>
 <strong>Earnest Money Deposit (EMD):</strong> $1,500 non-refundable, submitted on the first day post-inspection<br>
 <strong>Close of Escrow (COE):</strong> On or before 30 days from the signed contract</p>
 
-<p>In all offers, your commission will be covered. In the cash offer, it will come out of the seller's proceeds and in the seller financing offers, it will come out of the down payment to the seller.</p>
+<p>Your commission will be covered out of the seller's proceeds.</p>
 
-<p>Additionally, should there be any missed payments under the seller financing options, the property will revert back to the seller in lieu of foreclosure.</p>
-
-<p>Please don’t hesitate to reach out to discuss any aspect of these proposals or to schedule a meeting.</p>
+<p>Please don’t hesitate to reach out to discuss any aspect of this proposal or to schedule a meeting.</p>
 
 <p>Looking forward to your response.</p>
 
@@ -265,7 +248,6 @@ function generateOffer() {
 
     CKEDITOR.instances.offerOutput.setData(template);
 }
-
 function copyToClipboard() {
     const offerOutput = CKEDITOR.instances.offerOutput.getData();
     const el = document.createElement('textarea');
